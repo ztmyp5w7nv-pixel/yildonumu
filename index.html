@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>16. Yılımız Kutlu Olsun | Gülşah & Ekrem</title>
+    <!-- Zarif Google Fontları -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Arka Plan Gül Yaprakları Konteyneri -->
+    <div id="petals-container"></div>
+
+    <!-- Açılış Zarfi / Karşılama Ekranı -->
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="envelope-card">
+            <div class="rose-badge">🌹</div>
+            <span class="subtitle">16. EVLİLİK YILDÖNÜMÜ</span>
+            <h1 class="names-title">Gülşah & Ekrem</h1>
+            <p class="intro-hint">Sizin için hazırlanan bu özel anıyı açmak için dokunun</p>
+            <button id="open-btn" class="glow-btn">
+                <span>Anıyı Aç</span>
+                <span class="heart-icon">❤️</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Ana Mobil Uygulama Ekranı -->
+    <main id="main-app" class="mobile-container hidden">
+        
+        <!-- Üst Hero Bölümü -->
+        <header class="hero-section reveal">
+            <div class="year-pill">✨ 16 MUHTEŞEM YIL ✨</div>
+            <h1 class="hero-names">Gülşah <span class="amp">&</span> Ekrem</h1>
+            <p class="hero-quote">"Birlikte yaşlanan eller, hiç solmayan kırmızı güller gibidir..."</p>
+            <div class="divider">
+                <span></span><i>🌹</i><span></span>
+            </div>
+        </header>
+
+        <!-- 16 Yıllık Zaman Sayacı -->
+        <section class="stats-section reveal">
+            <h2 class="section-title">Sevgiyle Geçen 16 Yıl</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-num" data-target="16">0</span>
+                    <span class="stat-label">Mutlu Yıl</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num" data-target="192">0</span>
+                    <span class="stat-label">Aşk Dolu Ay</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num" data-target="5844">0</span>
+                    <span class="stat-label">Güzel Gün</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num">∞</span>
+                    <span class="stat-label">Sonsuz Sevgi</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Öne Çıkan Anı Kartı -->
+        <section class="featured-photo reveal">
+            <div class="photo-frame gold-border">
+                <img src="images/foto6.jpg" alt="Gülşah ve Ekrem">
+                <div class="photo-caption">
+                    <h3>Aynı Yola Baş Koyduğumuz İlk Günkü Gibi...</h3>
+                    <p>16 yıldır birbirinize olan sevginiz, sabrınız ve dostluğunuz en büyük ilhamımız.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anılar Galerisi (Dokunmatik Kaydırmalı / Polaroid) -->
+        <section class="gallery-section reveal">
+            <h2 class="section-title">En Güzel Karelerimiz</h2>
+            <p class="section-sub">Fotoğraflara dokunarak büyütebilirsiniz</p>
+            
+            <div class="gallery-grid">
+                <div class="polaroid" onclick="openLightbox('images/foto1.jpg', 'Ailemizin En Sıcak Hali ❤️')">
+                    <img src="images/foto1.jpg" alt="Aile Anısı">
+                    <span>Ailemizin En Sıcak Hali ❤️</span>
+                </div>
+
+                <div class="polaroid" onclick="openLightbox('images/foto5.jpg', 'Birlikte Keşfettiğimiz Yollar 🌍')">
+                    <img src="images/foto5.jpg" alt="Gezi Anısı">
+                    <span>Birlikte Keşfettiğimiz Yollar 🌍</span>
+                </div>
+
+                <div class="polaroid" onclick="openLightbox('images/foto4.jpg', 'Akşam Sohbetleri ve Huzur ✨')">
+                    <img src="images/foto4.jpg" alt="Akşam Yemeği">
+                    <span>Akşam Sohbetleri ve Huzur ✨</span>
+                </div>
+
+                <div class="polaroid" onclick="openLightbox('images/foto7.jpg', 'Güneşli Günler, Gülen Yüzler ☀️')">
+                    <img src="images/foto7.jpg" alt="Tatil Anısı">
+                    <span>Güneşli Günler, Gülen Yüzler ☀️</span>
+                </div>
+
+                <div class="polaroid" onclick="openLightbox('images/foto2.jpg', 'Her Sabahınız Birlikte Güzel ☕')">
+                    <img src="images/foto2.jpg" alt="Kahvaltı Anısı">
+                    <span>Her Sabahınız Birlikte Güzel ☕</span>
+                </div>
+
+                <div class="polaroid" onclick="openLightbox('images/foto3.jpg', 'Evimizin Neşesi, Kahkahalarımız 😂')">
+                    <img src="images/foto3.jpg" alt="Ev Neşesi">
+                    <span>Evimizin Neşesi, Kahkahalarımız 😂</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Özel Mektup Kartı -->
+        <section class="letter-section reveal">
+            <div class="letter-card">
+                <div class="wax-seal">16</div>
+                <h2>Canım Annem ve Babam,</h2>
+                <p>
+                    16 yıl önce başlayan bu güzel yolculukta, sevginizle, emeğinizle ve birbirinize olan bağlılığınızla bize her zaman en güzel örnek oldunuz.
+                </p>
+                <p>
+                    Zorlukları el ele aştığınız, mutlulukları çoğalttığınız, kahkahalarla dolu nice sağlıklı, huzurlu ve aşk dolu yıllarınız olsun. Sizi çok seviyoruz!
+                </p>
+                <div class="signature">Nice 16 Yıllara... 🌹</div>
+            </div>
+        </section>
+
+        <!-- İnteraktif Gül ve Kalp Yağmuru Butonu -->
+        <footer class="footer-section reveal">
+            <button id="celebrate-btn" class="celebrate-btn">
+                🌹 Kutlama Yağmuru Başlat ❤️
+            </button>
+            <p class="footer-note">Sonsuz Aşk ve Saygıyla • 16. Yıl Özel</p>
+        </footer>
+
+    </main>
+
+    <!-- Fotoğraf Büyütme Ekranı (Lightbox) -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Büyük Fotoğraf">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
